@@ -1,3 +1,7 @@
+// COMPONENTE (capa de presentación).
+// Barra de filtros de la lista: búsqueda (con debounce de 400ms), ordenar por,
+// dirección y filtro de contenido +18. Recibe los filtros actuales y avisa al
+// padre con onChange(nextFilters) cuando cambia algo. No hace fetch.
 import { useEffect, useRef, useState } from 'react'
 import { DEFAULT_FILTERS } from '../models/Filters'
 

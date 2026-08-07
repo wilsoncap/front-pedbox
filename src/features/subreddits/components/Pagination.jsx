@@ -1,3 +1,7 @@
+// COMPONENTE (capa de presentación).
+// Controles Anterior/Siguiente usando el "meta" que devuelve el backend
+// (total y totalPages). Recibe la página actual y avisa al padre con
+// onChange(nuevaPagina). No hace fetch.
 export function Pagination({ page, totalPages, total, onChange }) {
   if (!totalPages || totalPages <= 1) {
     return null

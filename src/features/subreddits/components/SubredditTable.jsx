@@ -1,3 +1,6 @@
+// COMPONENTE (capa de presentación).
+// Tabla de subreddits. Recibe la lista por props (items) y la pinta.
+// El icono de ojo navega al detalle de cada subreddit. No hace fetch.
 import { Link } from 'react-router-dom'
 
 const numberFormatter = new Intl.NumberFormat('es')
