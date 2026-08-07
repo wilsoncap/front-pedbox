@@ -1,16 +1,35 @@
-# React + Vite
+# Front-PedBox
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Frontend del proyecto **PedBox** (React + Vite). App de autenticación (registro/login)
+con un menú que lista subreddits de Reddit, con filtros y vista de detalle.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19 + Vite
+- react-router-dom v7 (rutas + guards)
+- @tanstack/react-query v5 (datos del servidor)
+- zustand v5 (sesión con persistencia en localStorage)
+- axios (interceptores: Bearer, 401, spinner global)
+- Tailwind CSS v4
+- oxlint
 
-## React Compiler
+## Requisitos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js (Vite 8)
+- Backend corriendo en `http://localhost:3000` (contrato en `API.md`)
 
-## Expanding the Oxlint configuration
+## Comandos
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+| Comando | Qué hace |
+|---|---|
+| `npm install` | Instala dependencias |
+| `npm run dev` | Dev server en `http://localhost:5173` (proxy a :3000) |
+| `npm run build` | Build de producción en `dist/` |
+| `npm run preview` | Sirve el build localmente |
+| `npm run lint` | Lint con oxlint |
+
+## Documentación
+
+- [`DOCUMENTACION.md`](./DOCUMENTACION.md) — arquitectura por features, estado del
+  proyecto, flujos y roadmap.
+- [`API.md`](./API.md) — contrato del backend (endpoints).
