@@ -17,16 +17,22 @@ export function Navbar() {
         <span className="text-lg font-bold text-purple-600">PedBox</span>
 
         <nav className="flex items-center gap-6">
-          <NavLink
-            to="/subreddits"
-            className={({ isActive }) =>
-              `font-medium transition-colors hover:text-purple-600 ${
-                isActive ? 'text-purple-600' : 'text-gray-700'
-              }`
-            }
-          >
-            Ver Reddit
-          </NavLink>
+          {[
+            { to: '/subreddits', label: 'Ver Reddit' },
+            { to: '/characters', label: 'Rick & Morty' },
+          ].map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              className={({ isActive }) =>
+                `font-medium transition-colors hover:text-purple-600 ${
+                  isActive ? 'text-purple-600' : 'text-gray-700'
+                }`
+              }
+            >
+              {label}
+            </NavLink>
+          ))}
         </nav>
 
         <div className="flex items-center gap-4">

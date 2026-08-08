@@ -7,7 +7,7 @@ import { DEFAULT_FILTERS } from '../models/Filters'
 import { useSubreddits } from '../hooks/useSubreddits'
 import { FiltersBar } from '../components/FiltersBar'
 import { SubredditTable } from '../components/SubredditTable'
-import { Pagination } from '../components/Pagination'
+import { Pagination } from '@/shared/components/Pagination'
 import { Loading } from '@/shared/components/Loading'
 import { getErrorMessage } from '@/shared/lib/errors'
 
