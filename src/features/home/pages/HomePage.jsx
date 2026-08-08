@@ -11,7 +11,7 @@ export default function HomePage() {
       </h1>
       <p className="mt-2 text-gray-600">¿Qué quieres hacer hoy?</p>
 
-      <nav className="mt-8">
+      <nav className="mt-8 grid gap-4 sm:grid-cols-2">
         <Link
           to="/subreddits"
           className="flex items-center justify-between rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
@@ -20,6 +20,19 @@ export default function HomePage() {
             <h2 className="text-lg font-semibold text-gray-900">Ver Reddit</h2>
             <p className="mt-1 text-sm text-gray-600">
               Consulta la lista de subreddits
+            </p>
+          </div>
+          <span className="text-2xl text-purple-600">&rarr;</span>
+        </Link>
+
+        <Link
+          to="/characters"
+          className="flex items-center justify-between rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+        >
+          <div>
+            <h2 className="text-lg font-semibold text-gray-900">Rick & Morty</h2>
+            <p className="mt-1 text-sm text-gray-600">
+              Consulta la lista de personajes
             </p>
           </div>
           <span className="text-2xl text-purple-600">&rarr;</span>
