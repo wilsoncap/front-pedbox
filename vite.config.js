@@ -12,7 +12,8 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api': 'http://localhost:3000',
+      '/api': 'backendpedbox-production.up.railway.app',
+      //'/api': 'http://localhost:3000',
     },
   },
 })
